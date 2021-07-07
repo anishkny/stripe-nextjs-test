@@ -4,6 +4,7 @@ const FRONTEND_BASE_URL =
   process.env.FRONTEND_BASE_URL || 'http://localhost:3000';
 
 export default async function handler(req, res) {
+  console.log(JSON.stringify(req.body));
   const id = uuid();
   console.log(`Creating checkout session: ${id}`);
 
