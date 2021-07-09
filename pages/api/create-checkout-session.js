@@ -1,7 +1,12 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const uuid = require('uuid').v4;
-const FRONTEND_BASE_URL =
-  process.env.FRONTEND_BASE_URL || 'http://localhost:3000';
+
+let FRONTEND_BASE_URL = 'http://localhost:3000';
+if (process.env.FRONTEND_BASE_URL) {
+  FRONTEND_BASE_URL = process.env.FRONTEND_BASE_URL;
+} else if (process.env.VERCEL_URL) {
+  FRONTEND_BASE_URL = `https://${process.env.VERCEL_URL}`;
+}
 
 export default async function handler(req, res) {
   console.log(JSON.stringify(req.body));
