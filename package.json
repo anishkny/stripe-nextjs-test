@@ -4,7 +4,8 @@
     "build": "next build",
     "start": "npm run build && next start",
     "lint": "next lint",
-    "test": "playwright test"
+    "test": "playwright test --browser=all",
+    "start-and-test": "start-server-and-test start 3000 test"
   },
   "dependencies": {
     "next": "^11.0.1",

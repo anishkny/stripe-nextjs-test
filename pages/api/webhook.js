@@ -7,7 +7,7 @@ export const config = {
   },
 };
 
-export default async function handler(req, res) {
+export default async function webhook(req, res) {
   console.log('Received Stripe webhook');
 
   // Verify the request is coming from Stripe

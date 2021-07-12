@@ -8,7 +8,7 @@ if (process.env.FRONTEND_BASE_URL) {
   FRONTEND_BASE_URL = `https://${process.env.VERCEL_URL}`;
 }
 
-export default async function handler(req, res) {
+export default async function checkout(req, res) {
   console.log(JSON.stringify(req.body));
   const id = uuid();
   console.log(`Creating checkout session: ${id}`);

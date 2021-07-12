@@ -2,7 +2,7 @@ function HomePage() {
   return (
     <div>
       <div>Stripe + Next.js Demo</div>
-      <form action="/api/create-checkout-session" method="POST">
+      <form action="/api/checkout" method="POST">
         <label>
           First Name:
           <input type="text" name="firstName" defaultValue="John" />
